@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal:
+      branch: main
+      repo: https://gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal git:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-linen-crocodile.sh
+        container: qc.acc_lumpy-wisteria-cougar
+  QC.Doc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-wheat-flamingo.sh
+        container: qc.doc_whiny-dandelion-spaniel
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-periwinkle-argentino.sh
+        container: qc.doc_seedy-periwinkle-markhor
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-rose-magpie.sh
+        container: qc.doc_scanty-brown-ladybird
+  QC.Lic:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-mauve-seahorse.sh
+        container: qc.lic_goopy-fuchsia-coyote
+  QC.Sec:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-auburn-mouse.sh
+        container: qc.sec_squeaky-violet-jackal
+  QC.Sty:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-chartreuse-stoat.sh
+        container: qc.sty_bumpy-viridian-cassowary
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-peach-cuttlefish.sh
+        container: qc.sty_nippy-taupe-bongo
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-azure-gecko.sh
+        container: qc.sty_muggy-salmon-lion
+  QC.Uni:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-indigo-sponge.sh
+        container: qc.uni_foggy-purple-labradoodle
+  QC.Ver:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-dandelion-jellyfish.sh
+        container: qc.ver_smelly-chartreuse-serval
+timeout: 5400
