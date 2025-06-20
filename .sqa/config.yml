@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal git:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-firebrick-hippopotamus.sh
-        container: qc.acc_pretty-taupe-newt
+        - /usr/bin/env sh .sqa/script.nippy-ruby-sloth.sh
+        container: qc.acc_messy-lavender-caiman
   QC.Doc:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-puce-tarsier.sh
-        container: qc.doc_fuzzy-myrtle-wolfhound
+        - /usr/bin/env sh .sqa/script.chewy-apricot-owl.sh
+        container: qc.doc_woozy-copper-slug
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal git:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-coral-antelope.sh
-        container: qc.doc_hilly-ultramarine-penguin
+        - /usr/bin/env sh .sqa/script.sunny-ruby-serval.sh
+        container: qc.doc_woozy-orchid-mastiff
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-denim-butterfly.sh
-        container: qc.doc_stuffy-peach-anteater
+        - /usr/bin/env sh .sqa/script.crabby-cerise-monster.sh
+        container: qc.doc_gamy-thistle-fly
   QC.Lic:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-cornflower-frog.sh
-        container: qc.lic_goopy-crimson-bombay
+        - /usr/bin/env sh .sqa/script.skinny-amber-hyrax.sh
+        container: qc.lic_cranky-coral-dragonfly
   QC.Sec:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-periwinkle-fly.sh
-        container: qc.sec_flabby-heliotrope-ragdoll
+        - /usr/bin/env sh .sqa/script.fuzzy-salmon-schnauzer.sh
+        container: qc.sec_flaky-razzmatazz-boar
   QC.Sty:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-russet-rabbit.sh
-        container: qc.sty_wimpy-champagne-foxhound
+        - /usr/bin/env sh .sqa/script.hasty-ivory-oriole.sh
+        container: qc.sty_stinky-lemon-eel
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-persimmon-zonkey.sh
-        container: qc.sty_hasty-saffron-rhinoceros
+        - /usr/bin/env sh .sqa/script.shaggy-corn-harrier.sh
+        container: qc.sty_pretty-azure-newt
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-puce-fossa.sh
-        container: qc.sty_scummy-malachite-dodo
+        - /usr/bin/env sh .sqa/script.hasty-carmine-yak.sh
+        container: qc.sty_smelly-periwinkle-weasel
   QC.Uni:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-malachite-bonobo.sh
-        container: qc.uni_snappy-magnolia-skunk
+        - /usr/bin/env sh .sqa/script.hasty-turquoise-wallaby.sh
+        container: qc.uni_snazzy-bronze-quetzal
   QC.Ver:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/dal get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-champagne-dugong.sh
-        container: qc.ver_stinky-olivine-monkey
+        - /usr/bin/env sh .sqa/script.skinny-viridian-bear.sh
+        container: qc.ver_scaly-pink-tamarin
 timeout: 5400
